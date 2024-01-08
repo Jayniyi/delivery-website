@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransitFlow </title>
+    <link rel="stylesheet" href="service.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="img/Logo.png " type="img/x-icon">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@800&family=Nosifer&family=Playpen+Sans:wght@800&family=Rubik+Mono+One&family=Sedgwick+Ave+Display&family=Sriracha&display=swap" rel="stylesheet">
+</head>
+<body>
+        <!-- nav bar-->
+        <header>
+            <div>
+                <header>
+                    <header id="header">
+                        <div class="navbar" id="navbar">
+                        <div class=" logo items" id="logo" >
+                            <img style="width: 100%; height: 5vh;" src="img/Logo.png" alt="logo" srcset="">
+                            <h4 class="items">TransitFlow</h4>
+                        </div>
+                        <div class="head-message">
+                            <div style="display: flex; gap: .6rem;" >
+                                <div style="display: flex;gap: .6rem;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64" fill="none">
+                                        <circle cx="31.6309" cy="32" r="31" fill="#111C55" stroke="#273270"/>
+                                        <path d="M32.1309 42.5C38.206 42.5 43.1309 37.5751 43.1309 31.5C43.1309 25.4249 38.206 20.5 32.1309 20.5C26.0557 20.5 21.1309 25.4249 21.1309 31.5C21.1309 37.5751 26.0557 42.5 32.1309 42.5Z" stroke="#F6B426"/>
+                                        <path d="M32.1309 22.5V31.7058L37.1309 35.5" stroke="#F6B426"/>
+                                    </svg>
+                                    <p>
+                                        Mon - Sat 9.00 - 18.00 
+                                    </p>
+                                </div>
+                                <div style="display: flex; gap: .6rem;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64" fill="none">
+                                        <circle cx="31.6309" cy="32" r="31" fill="#111C55" stroke="#273270"/>
+                                        <path d="M41.1268 23.5H23.1349C22.5804 23.5 22.1309 23.8755 22.1309 24.3387V37.6613C22.1309 38.1245 22.5804 38.5 23.1349 38.5H41.1268C41.6813 38.5 42.1309 38.1245 42.1309 37.6613V24.3387C42.1309 23.8755 41.6813 23.5 41.1268 23.5Z" stroke="#F6B426"/>
+                                        <path d="M22.1309 23.5L32.5556 30.5L42.1309 23.7294" stroke="#F6B426"/>
+                                        </svg>
+                                    <p>
+                                        Email:
+                                        Obasanjoseph9@gmail.com
+                                    </p>
+                                </div>
+                                <div style="display: flex;gap: .5rem;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 63" fill="none">
+                                        <circle cx="31.6309" cy="31.5" r="31" fill="#111C55" stroke="#273270"/>
+                                        <path d="M24.1049 22.1408C23.9703 22.1449 23.8379 22.1743 23.7157 22.2272C23.5934 22.28 23.4837 22.3554 23.393 22.4487C23.3024 22.542 23.2326 22.6514 23.1879 22.7704C23.1432 22.8894 23.1245 23.0156 23.1328 23.1416C23.2673 25.3015 23.9013 30.5716 26.9368 33.8583C30.5718 37.8181 35.3057 39.1824 40.1626 38.9808C40.4229 38.9662 40.6676 38.8596 40.8474 38.6826C41.0271 38.5055 41.1284 38.2712 41.1309 38.0268V34.5674C41.1278 34.2446 41.0091 33.9322 40.7938 33.6802C40.5785 33.4282 40.2791 33.2513 39.9435 33.1779L37.5113 32.6739C37.2104 32.6138 36.8973 32.6397 36.6123 32.7481C36.3273 32.8566 36.0837 33.0427 35.9128 33.2823L35.3749 34.0454C35.3255 34.1153 35.2516 34.1668 35.1661 34.1911C35.0805 34.2154 34.9885 34.211 34.9061 34.1786C33.6688 33.6783 28.7389 31.5184 28.1971 27.8753C28.1865 27.805 28.1984 27.7333 28.2312 27.6692C28.264 27.6051 28.3163 27.5516 28.3816 27.5154L29.3576 26.9574C29.6253 26.802 29.8355 26.5732 29.9599 26.3022C30.0843 26.0311 30.1168 25.7308 30.053 25.4419L29.5189 23.1236C29.4409 22.7988 29.245 22.5093 28.9648 22.3045C28.6846 22.0998 28.3373 21.9923 27.982 22.0004L24.1049 22.1408Z" stroke="#F6B426"/>
+                                    </svg>
+                                    <p>
+                                        call Me:
+                                         07068795963
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile">
+                                <button class="hamburger">
+                                    <span class="bar"></span>
+                                </button>
+                                    <nav class="mobile-nav">
+                                        <a class=""  href="index.html"> home</a>
+                                        <a href="about-page.html">About us </a>
+                                        <a href="service.html">service</a>
+                                        <a href="contact.html">Contacts</a>
+                                        <a href="project.html">projects</a>
+                                    </nav>
+                        </div>
+                    </header>
+                </header>
+            </div>
+        </header>
+    <!-- nav bar end  -->
+   <!-- hero section  -->
+    <div>
+        <div class="hero-section">
+            <div>
+                <div class="nav-menu">
+                    <nav>
+                        <ul class="ali" id="home">
+                            <li class="hom active"><a href="index.html">home   |</a></li>
+                            <li class="hom"><a href="about-page.html">about us   |</a></li>
+                            <li class="hom" id="#"><a href="service.html">service   |</a></li>
+                            <li class="hom"><a href="contact.html">Contacts    |</a></li>
+                            <li class="hom"><a href="project.html">projects      |</a></li>
+                            <!-- <button><a href="">login</a></button> -->
+                            <!-- <li><a href="home">Contacts</a></li> -->
+                        </ul>
+                    </nav>
+                    <div style="display: flex; gap: 1rem;" >
+                        <div>
+                            <a href="https://www.instagram.com/jayni_yi?igshid=YzAwZjE1ZTI0Zg==">
+                                <svg class="socials" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M14.0759 2.03236C15.173 2.03551 16.2242 2.45628 17 3.20276C17.7757 3.94925 18.213 4.9608 18.2162 6.01648V13.9839C18.213 15.0396 17.7757 16.0511 17 16.7976C16.2242 17.5441 15.173 17.9649 14.0759 17.968H5.79618C4.69911 17.9649 3.6479 17.5441 2.87215 16.7976C2.0964 16.0511 1.65914 15.0396 1.65586 13.9839V6.01648C1.65914 4.9608 2.0964 3.94925 2.87215 3.20276C3.6479 2.45628 4.69911 2.03551 5.79618 2.03236H14.0759ZM14.0759 0.438965H5.79618C2.60821 0.438965 0 2.94878 0 6.01648V13.9839C0 17.0516 2.60821 19.5614 5.79618 19.5614H14.0759C17.2639 19.5614 19.8721 17.0516 19.8721 13.9839V6.01648C19.8721 2.94878 17.2639 0.438965 14.0759 0.438965Z" fill="white"/>
+                                    <path d="M15.3177 6.01677C15.072 6.01677 14.8319 5.94668 14.6277 5.81535C14.4234 5.68403 14.2642 5.49737 14.1702 5.27898C14.0762 5.0606 14.0516 4.82029 14.0995 4.58846C14.1475 4.35662 14.2658 4.14366 14.4395 3.97652C14.6131 3.80937 14.8345 3.69555 15.0754 3.64943C15.3163 3.60331 15.566 3.62698 15.793 3.71744C16.0199 3.8079 16.2139 3.96108 16.3504 4.15763C16.4868 4.35417 16.5597 4.58524 16.5597 4.82162C16.56 4.97866 16.5282 5.13423 16.4659 5.27938C16.4036 5.42454 16.3121 5.55642 16.1967 5.66747C16.0813 5.77852 15.9442 5.86654 15.7934 5.92648C15.6425 5.98642 15.4809 6.01711 15.3177 6.01677ZM9.9358 6.81325C10.5909 6.81325 11.2313 7.00018 11.7759 7.3504C12.3206 7.70061 12.7452 8.19839 12.9958 8.78077C13.2465 9.36316 13.3121 10.004 13.1843 10.6223C13.0565 11.2405 12.7411 11.8084 12.2779 12.2542C11.8146 12.6999 11.2245 13.0035 10.582 13.1264C9.93948 13.2494 9.27351 13.1863 8.66829 12.9451C8.06307 12.7038 7.54578 12.2953 7.18184 11.7712C6.81789 11.2471 6.62364 10.6308 6.62364 10.0005C6.62458 9.15544 6.97384 8.34529 7.59478 7.74777C8.21573 7.15024 9.05765 6.81416 9.9358 6.81325ZM9.9358 5.21986C8.95322 5.21986 7.9927 5.50024 7.17571 6.02554C6.35873 6.55084 5.72196 7.29747 5.34594 8.17101C4.96993 9.04455 4.87154 10.0058 5.06323 10.9331C5.25493 11.8605 5.72809 12.7123 6.42288 13.3809C7.11767 14.0494 8.00289 14.5048 8.96659 14.6892C9.93029 14.8737 10.9292 14.779 11.837 14.4172C12.7448 14.0553 13.5207 13.4426 14.0666 12.6564C14.6125 11.8703 14.9038 10.946 14.9038 10.0005C14.9038 8.73257 14.3804 7.51661 13.4487 6.62007C12.517 5.72353 11.2534 5.21986 9.9358 5.21986Z" fill="white"/>
+                                </svg>
+                           </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <svg class="socials" xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4065 10.0578C21.4065 4.74704 16.8092 0.440918 11.1393 0.440918C5.4694 0.440918 0.87207 4.74704 0.87207 10.0578C0.87207 14.8576 4.62602 18.8362 9.53503 19.5583V12.8385H6.92743V10.0578H9.53503V7.93907C9.53503 5.52927 11.0682 4.19708 13.4132 4.19708C14.5366 4.19708 15.7119 4.38512 15.7119 4.38512V6.75199H14.4165C13.1418 6.75199 12.7431 7.49301 12.7431 8.25463V10.0578H15.5904L15.1357 12.8385H12.7435V19.5592C17.6525 18.8375 21.4065 14.8589 21.4065 10.0578Z" fill="white"/>
+                                </svg>
+                           </a>
+                        </div>
+                        <div>
+                            <a href="https://x.com/JosephObasan?t=sR-oiURiIIYlOkXXjIT25Q&s=09">
+                                <svg class="socials" xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                                    <path d="M19.5756 2.1537C18.8566 2.46592 18.0958 2.67161 17.3172 2.76428C18.1354 2.28554 18.7507 1.52498 19.0477 0.625233C18.2742 1.07722 17.4293 1.39436 16.5493 1.56306C16.1787 1.17497 15.733 0.866237 15.2393 0.65562C14.7456 0.445004 14.2143 0.336906 13.6775 0.337897C11.5041 0.337897 9.74533 2.06989 9.74533 4.20495C9.74379 4.50193 9.77785 4.79802 9.84677 5.08691C8.28834 5.0139 6.76231 4.61663 5.36632 3.92051C3.97033 3.22439 2.73512 2.24475 1.73972 1.04426C1.39051 1.63255 1.20583 2.30377 1.20497 2.98777C1.20497 4.32866 1.90506 5.51392 2.96217 6.20832C2.33586 6.19346 1.72238 6.02781 1.17382 5.72543V5.77332C1.17382 7.64898 2.53166 9.20937 4.32879 9.56455C3.99084 9.65458 3.64259 9.70019 3.29284 9.70024C3.04467 9.70067 2.79706 9.67661 2.55362 9.6284C3.05322 11.1648 4.5073 12.2823 6.22975 12.3142C4.83014 13.3921 3.11178 13.9746 1.34475 13.9704C1.0311 13.9699 0.717739 13.9512 0.40625 13.9145C2.20385 15.0615 4.29342 15.6682 6.42624 15.6624C13.6691 15.6624 17.6259 9.76808 17.6259 4.65591C17.6259 4.4883 17.6216 4.32068 17.6136 4.15706C18.3816 3.61115 19.046 2.93274 19.5756 2.1537Z" fill="white"/>
+                                </svg>
+                           </a>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/in/joseph-obasan-59772a288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                                <svg class="socials" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" >
+                                    <path d="M18.4415 0.291016H2.2354C1.34987 0.291016 0.576172 0.928181 0.576172 1.80331V18.0454C0.576172 18.9253 1.34987 19.7094 2.2354 19.7094H18.4367C19.327 19.7094 19.9945 18.9201 19.9945 18.0454V1.80331C19.9997 0.928181 19.327 0.291016 18.4415 0.291016ZM6.59543 16.4772H3.81358V7.82777H6.59543V16.4772ZM5.30073 6.51269H5.28079C4.39049 6.51269 3.81401 5.84996 3.81401 5.02034C3.81401 4.17555 4.40566 3.52842 5.3159 3.52842C6.22613 3.52842 6.78311 4.17079 6.80305 5.02034C6.80262 5.84996 6.22613 6.51269 5.30073 6.51269ZM16.7623 16.4772H13.9805V11.7478C13.9805 10.6148 13.5756 9.84069 12.5692 9.84069C11.8002 9.84069 11.3451 10.3608 11.1427 10.8675C11.0669 11.0496 11.0465 11.2975 11.0465 11.5506V16.4772H8.26463V7.82777H11.0465V9.03145C11.4513 8.45496 12.0837 7.62535 13.5553 7.62535C15.3814 7.62535 16.7628 8.82903 16.7628 11.4241L16.7623 16.4772Z" fill="white"/>
+                                  </svg>
+                           </a>
+                        </div>
+                        <!-- <div>
+                            <button>Request Demo</button>
+                        </div> -->
+    
+                    </div>
+                </div>
+            </div>
+           <div class="hero-content">
+             <p>  services</p>
+             <h1>Our Logistics <br> Service</h1>
+           </div>
+        </div>
+    </div>
+    <!-- hero section end  -->
+     <!-- what we do  -->
+      <div>
+        <div class="what-we-do">
+            <div>
+                <h4> what we do</h4>
+                <h1>Our Logistics Services</h1>
+            </div>
+            <div class="what-we-do-list">
+                <div class="what-we-do-list1">
+                    <div class="do-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="58" viewBox="0 0 52 58" fill="none">
+                            <path d="M25.6641 7.81435V1.64941" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M50.3234 36.5841C46.5731 49.6846 29.2085 54.257 26.126 54.9762C25.8226 55.0534 25.5047 55.0534 25.2013 54.9762C22.1188 54.257 4.75424 49.6846 1.00391 36.5841V27.7991C1.00387 27.3664 1.14043 26.9447 1.39411 26.5942C1.6478 26.2436 2.00566 25.9821 2.4167 25.8469L25.0215 18.2948C25.4399 18.1661 25.8874 18.1661 26.3058 18.2948L48.9106 25.8469C49.3217 25.9821 49.6795 26.2436 49.9332 26.5942C50.1869 26.9447 50.3235 27.3664 50.3234 27.7991V36.5841Z" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M26.131 48.3146C23.6922 47.7531 9.95355 44.1835 6.98633 33.9561" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.98633 10.6318V23.7852L25.5327 17.2042L44.0791 23.7852V10.6318C44.0791 8.97498 42.736 7.63184 41.0791 7.63184H9.98633C8.32947 7.63184 6.98633 8.97498 6.98633 10.6318Z" fill="#FFD550" stroke="#1C1F35" stroke-width="2"/>
+                            <path d="M25.6641 38.6392V18.1921" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M30.918 37.5457L30.918 29.1699" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.7725 18.4007V12.418" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M48.8652 20.794V10.0251" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h2 style="color: #FFB82B;">Sea Transport Services</h2>
+                        <p>Following the quality of our service thus having gained trust of our many clients.</p>
+                    </div>
+                    <div class="do-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="57" height="58" viewBox="0 0 57 58" fill="none">
+                            <path d="M2.05176 45.6494H54.4327" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M32.4324 45.6494V3.56246C32.4324 3.05509 32.2275 2.5685 31.8626 2.20973C31.4977 1.85097 31.0029 1.64941 30.4869 1.64941H7.13991C6.62391 1.64941 6.12905 1.85097 5.76418 2.20973C5.39932 2.5685 5.19434 3.05509 5.19434 3.56246V45.6494" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M32.4326 14.2209H48.2898C49.9466 14.2209 51.2898 15.5641 51.2898 17.2209V44.6019H32.4326V14.2209Z" fill="#FFD550" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.5752 11.0779H20.9085" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1.00391 41.459L1.00391 26.7923" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M55.4805 30.9824L55.4805 16.3158" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M35.5752 10.0303L42.9085 10.0303" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16.7188 26.792H24.0521" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.5752 36.2209H20.9085" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M39.7656 36.2209H43.9561" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M39.7656 26.792H43.9561" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h2>Warehousing Services</h2>
+                        <p>Following the quality of our service thus having gained trust of our many clients.</p>
+                    </div>
+                    <div class="do-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="74" height="56" viewBox="0 0 74 56" fill="none">
+                            <path d="M17.4375 43.3777H53.0681" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M34.3535 28.5188L49.7721 19.2362" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9.87988 25.9482L15.855 31.9234" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1.24219 23.7891L7.21731 29.7642" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15.9119 23.5191L25.3064 32.5308C26.5591 33.7338 28.1573 34.4905 29.8634 34.6882C31.5694 34.886 33.2923 34.5144 34.7757 33.6286L72.5032 11.1631L67.8682 5.34255C66.6625 3.83397 64.9699 2.81692 63.0962 2.47514C61.2225 2.13336 59.2912 2.48941 57.6514 3.47895L46.5873 10.142L31.6358 5.03621L27.5242 6.84876C27.2166 6.98381 26.9471 7.19603 26.7406 7.46585C26.5341 7.73566 26.3973 8.05439 26.3427 8.39265C26.288 8.73092 26.3174 9.07782 26.4281 9.40138C26.5388 9.72495 26.7272 10.0148 26.976 10.2441L34.6261 17.2901L27.6488 21.3747L20.6714 18.3112L16.485 20.1493C16.1805 20.2833 15.9133 20.4931 15.7078 20.7595C15.5022 21.0259 15.3648 21.3407 15.3079 21.6752C15.251 22.0098 15.2764 22.3536 15.3819 22.6756C15.4874 22.9975 15.6695 23.2874 15.9119 23.5191V23.5191Z" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M68.724 6.66756C62.7342 11.3721 56.8215 11.9633 52.5283 6.66756L55.9016 4.47491C60.0936 1.75015 65.6757 2.7047 68.724 6.66756Z" fill="#FFD550" stroke="#1C1F35" stroke-width="2"/>
+                        </svg>
+                        <h2>Air Fright Services</h2>
+                        <p>Following the quality of our service thus having gained trust of our many clients.</p>
+                    </div>
+                </div>
+                    <div class="what-we-do-list1">
+                        <div class="do-list">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="59" viewBox="0 0 52 59" fill="none">
+                                <path d="M4.83301 41.7498V14.9165" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M43.167 14.9165V41.7498" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16.333 28.3335V32.1668" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M24 26.4167V32.1667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M31.667 24.5V32.1667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M45.0833 7.25H2.91666C1.85812 7.25 1 8.10812 1 9.16666V13C1 14.0585 1.85812 14.9167 2.91666 14.9167H45.0833C46.1418 14.9167 46.9999 14.0585 46.9999 13V9.16666C46.9999 8.10812 46.1418 7.25 45.0833 7.25Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M45.0833 7.25H2.91666C1.85812 7.25 1 8.10812 1 9.16666V13C1 14.0585 1.85812 14.9167 2.91666 14.9167H45.0833C46.1418 14.9167 46.9999 14.0585 46.9999 13V9.16666C46.9999 8.10812 46.1418 7.25 45.0833 7.25Z" fill="#FFD550" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M17.3997 57.2948C15.5968 55.985 14.7876 52.8168 16.813 50.2047" stroke="#1C1F35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M1 1H22" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M51 18L51 28" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M24 41.75V49.4167" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M24.0003 57.0834C26.1174 57.0834 27.8337 55.3672 27.8337 53.2501C27.8337 51.133 26.1174 49.4167 24.0003 49.4167C21.8832 49.4167 20.167 51.133 20.167 53.2501C20.167 55.3672 21.8832 57.0834 24.0003 57.0834Z" fill="#FFD550" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M1 41.75H46.9999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <h2>Project & Exhibition</h2>
+                            <p>Following the quality of our service thus having gained trust of our many clients.</p>
+                        </div>
+                        <div class="do-list">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="58" viewBox="0 0 56 58" fill="none">
+                                <path d="M39.0752 16.0422V6.07788H44.672C47.5065 6.07788 50.0613 7.7873 51.1426 10.4075L53.183 15.3514C53.3188 15.6806 53.0769 16.0422 52.7208 16.0422H39.0752Z" fill="#FFD550" stroke="#1C1F35" stroke-width="2"/>
+                                <path d="M1.43262 22.6855H39.0755" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M42.3968 40.399C46.0655 40.399 49.0396 37.4249 49.0396 33.7561C49.0396 30.0874 46.0655 27.1133 42.3968 27.1133C38.728 27.1133 35.7539 30.0874 35.7539 33.7561C35.7539 37.4249 38.728 40.399 42.3968 40.399Z" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.6116 40.399C17.2804 40.399 20.2545 37.4249 20.2545 33.7561C20.2545 30.0874 17.2804 27.1133 13.6116 27.1133C9.94286 27.1133 6.96875 30.0874 6.96875 33.7561C6.96875 37.4249 9.94286 40.399 13.6116 40.399Z" fill="#FFD550" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M35.7539 32.6494H20.2539" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.91297 32.6494H3.31476C2.81558 32.6494 2.33685 32.4453 1.98388 32.0819C1.63091 31.7186 1.43262 31.2258 1.43262 30.7119V3.58691C1.43262 3.07306 1.63091 2.58025 1.98388 2.2169C2.33685 1.85354 2.81558 1.64941 3.31476 1.64941H39.0755V27.6119" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M39.0752 16.042H54.5752V30.8039C54.5752 31.2933 54.3711 31.7626 54.0077 32.1087C53.6444 32.4547 53.1516 32.6491 52.6377 32.6491H48.9011" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.86133 15.3511L5.86133 6.07788" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M25.7893 18.2568L35.0625 18.2568" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M25.7899 36.9709L29.1113 36.9709" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <h2>Local Shipping Services</h2>
+                            <p>Following the quality of our service thus having gained trust of our many clients.</p>
+                        </div>
+                        <div class="do-list">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="58" viewBox="0 0 56 58" fill="none">
+                                <path d="M24.8271 28.8953C32.3508 28.8953 38.45 22.7961 38.45 15.2724C38.45 7.74862 32.3508 1.64941 24.8271 1.64941C17.3033 1.64941 11.2041 7.74862 11.2041 15.2724C11.2041 22.7961 17.3033 28.8953 24.8271 28.8953Z" fill="#FFD550" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.34668 37.9774C7.73355 35.1326 10.7145 32.8451 14.08 31.2756C17.4456 29.7061 21.114 28.8928 24.8275 28.8928C28.541 28.8928 32.2094 29.7061 35.575 31.2756C38.9405 32.8451 41.9215 35.1326 44.3084 37.9774" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M51.8916 39.1123L41.6744 39.1123L41.6744 20.9484L51.8916 20.9484L51.8916 39.1123Z" fill="white" stroke="#141414" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M51.8916 27.76L41.6744 27.76L41.6744 20.9485L51.8916 20.9485L51.8916 27.76Z" fill="#FFD550" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M48.4863 25.4895L45.0806 25.4895" stroke="#141414" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M48.4863 31.1653L45.0806 31.1653" stroke="#141414" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M55.2979 28.8953L55.2979 38.5526" stroke="#1C1F35" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.71985 22.6294C5.84412 21.4753 3.68546 17.6349 5.35547 10.4199" stroke="#1C1F35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M35.2446 16.685C35.1963 17.8454 34.555 21.3291 29.708 25.0125" stroke="#1C1F35" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <h2>Air Fright Services</h2>
+                            <p>Following the quality of our service thus having gained trust of our many clients.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="what-we-do-list-button"><a href="more-work.html">More Work </a></button>
+                    </div>
+            </div>
+        </div>
+      </div>
+     <!-- what we do end  -->
+     <!-- hwo we work  -->
+     <div>
+        <div class="how-we-work">
+            <div>
+                <h4>
+                    Our Goodness
+                </h4>
+                <h1>How We Work</h1>
+            </div>
+            <div class="how-we-work-content">
+                <div>
+                    <img src="img/how we work image.png" alt="" srcset="">
+                </div>
+                <div class="content-text">
+                    <div style="display: flex; gap: 2rem; padding-bottom: 1rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="56" viewBox="0 0 50 56" fill="none">
+                            <path d="M3.95898 18.512L25.0392 30.3464L24.6693 53.2758L3.95898 41.4413V18.512Z" fill="#FFD550"/>
+                            <path d="M25.4082 4.82837L46.8582 17.0327L37.2427 22.2103L15.4229 10.3758L25.4082 4.82837Z" fill="#FFD550"/>
+                            <path d="M48.2489 41.2108V18.0032C48.2471 17.668 48.157 17.3391 47.9875 17.0499C47.8181 16.7606 47.5754 16.5211 47.2839 16.3556L26.5712 4.7047C26.2921 4.54357 25.9755 4.45874 25.6533 4.45874C25.331 4.45874 25.0144 4.54357 24.7353 4.7047L4.02264 16.3556C3.73113 16.5211 3.48843 16.7606 3.319 17.0499C3.14958 17.3391 3.05942 17.668 3.05762 18.0032V41.2108C3.05942 41.546 3.14958 41.8748 3.319 42.1641C3.48843 42.4534 3.73113 42.6929 4.02264 42.8584L24.7353 54.5093C25.0144 54.6704 25.331 54.7552 25.6533 54.7552C25.9755 54.7552 26.2921 54.6704 26.5712 54.5093L47.2839 42.8584C47.5754 42.6929 47.8181 42.4534 47.9875 42.1641C48.157 41.8748 48.2471 41.546 48.2489 41.2108V41.2108Z" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M37.1865 35.3734V23.1341L14.3555 10.5417" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M47.9899 17.0381L25.865 29.6069L3.31641 17.0381" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M25.8652 29.6069L25.6533 54.7446" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M0.999642 13.5696L11.6348 7.41699" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M29.8468 1.50001L40.4873 7.64331" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M40.4872 42.1809L29.8467 48.3242" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div>
+                            <h3>Warehousing Services</h3>
+                            <p>Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div  style="display: flex;gap: 2rem; padding-bottom: 1rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="54" viewBox="0 0 50 54" fill="none">
+                                <path d="M2.00391 21.1534V7.37489C2.00391 6.87686 2.20077 6.39923 2.5512 6.04707C2.90162 5.69491 3.3769 5.49707 3.87247 5.49707H41.2438C41.7394 5.49707 42.2147 5.69491 42.5651 6.04707C42.9155 6.39923 43.1124 6.87686 43.1124 7.37489V21.1534C43.1124 40.8704 26.4588 47.3959 23.1421 48.4991C22.7653 48.6393 22.351 48.6393 21.9742 48.4991C18.6575 47.3959 2.00391 40.8704 2.00391 21.1534Z" fill="#FFD550" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18.3137 51.2406C15.3888 50.3181 8.21071 46.8345 1.22168 37.7451" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M32.8345 18.6416L19.1239 31.7863L12.2803 25.214" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M27.4901 29.5548L22.5566 34.5127" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M48.2227 5.45777L48.2227 18.6787" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21.556 1.5L1 1.5" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <div>
+                                <h3>Safety & Quality</h3>
+                                <p>Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div  style="display: flex; gap: 2rem;padding-bottom: 1rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="49" height="51" viewBox="0 0 49 51" fill="none">
+                                <path d="M25.5117 39.7375C27.1618 40.8664 29.0278 41.6379 30.9909 42.0032C32.954 42.3684 34.9713 42.3193 36.9145 41.8589C38.8577 41.3986 40.6843 40.5371 42.278 39.3293C43.8717 38.1215 45.1977 36.5937 46.1717 34.8433C47.1457 33.0928 47.7463 31.1579 47.9353 29.1616C48.1244 27.1653 47.8978 25.1514 47.2698 23.2479C46.6419 21.3444 45.6264 19.5929 44.288 18.105C42.9496 16.617 41.3175 15.4251 39.4955 14.6051C39.0955 14.4031 38.7776 14.0679 38.5962 13.6567C37.4307 10.8679 35.4711 8.4869 32.9634 6.81251C30.4556 5.13811 27.5113 4.24487 24.5 4.24487C21.4887 4.24487 18.5444 5.13811 16.0366 6.81251C13.5289 8.4869 11.5693 10.8679 10.4038 13.6567C10.2224 14.0679 9.90453 14.4031 9.50447 14.6051C7.68253 15.4251 6.05045 16.617 4.71202 18.105C3.37359 19.5929 2.35812 21.3444 1.73018 23.2479C1.10225 25.1514 0.875601 27.1653 1.06465 29.1616C1.25371 31.1579 1.85432 33.0928 2.8283 34.8433C3.80227 36.5937 5.12829 38.1215 6.72202 39.3293C8.31574 40.5371 10.1423 41.3986 12.0855 41.8589C14.0287 42.3193 16.046 42.3684 18.0091 42.0032C19.9722 41.6379 21.8382 40.8664 23.4883 39.7375C23.7888 39.5394 24.1405 39.4338 24.5 39.4338C24.8595 39.4338 25.2112 39.5394 25.5117 39.7375Z" fill="#FFD550" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M42.5533 29.8874C41.4129 32.7356 38.6091 37.5017 30.9355 37.5017" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.88031 10.7233C8.18284 7.74873 11.2221 3.49936 17.8398 1.96851" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M24.8623 49.9112V18.7146" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M24.8622 32.58L14.2373 27.3806" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.1228 24.3587L18.5869 26.3162" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21.7744 18.4266L21.7744 22.3416" stroke="#1C1F35" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M27.5654 43.2449L27.5654 48.2449" stroke="#1C1F35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M24.8623 27.3808L35.4872 22.1814" stroke="#1C1F35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <div>
+                                <h3>Care for Environment</h3>
+                                <p>Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <!-- how we work end -->
+     <!-- customers review  -->
+     <div style="margin-top: 5rem;margin-bottom: 8rem;">
+        <div class="swiper mySwiper">
+            <h1 style="text-align: center; " class="Customer">What Our Customer Say</h1>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="test">
+                    <div class="test2 none">
+                        <div style="display: flex;">
+                            <div>
+                                <img style="border-radius: 50px;" src="img/test1.png" alt="" srcset="">
+                            </div>
+                            <div>
+                             <h5>Kathleen Smith</h5>
+                            <p>Fuel Company</p>   
+                            </div>
+                            
+                        </div>
+                        <p style="color: #666C89;">
+                            Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+                        </p>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="180" height="34" viewBox="0 0 180 34" fill="none">
+                                <path d="M16.0489 2.92705C16.3483 2.00574 17.6517 2.00574 17.9511 2.92705L20.5922 11.0557C20.7261 11.4678 21.1101 11.7467 21.5433 11.7467L30.0903 11.7467C31.059 11.7467 31.4618 12.9863 30.6781 13.5557L23.7634 18.5795C23.4129 18.8342 23.2663 19.2855 23.4001 19.6976L26.0413 27.8262C26.3406 28.7475 25.2862 29.5137 24.5025 28.9443L17.5878 23.9205C17.2373 23.6658 16.7627 23.6658 16.4122 23.9205L9.49755 28.9443C8.71383 29.5137 7.65936 28.7475 7.95871 27.8262L10.5999 19.6976C10.7337 19.2855 10.5871 18.8342 10.2366 18.5795L3.32194 13.5557C2.53822 12.9863 2.941 11.7467 3.90972 11.7467L12.4567 11.7467C12.8899 11.7467 13.2739 11.4678 13.4078 11.0557L16.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M53.0489 2.92705C53.3483 2.00574 54.6517 2.00574 54.9511 2.92705L57.5922 11.0557C57.7261 11.4678 58.1101 11.7467 58.5433 11.7467L67.0903 11.7467C68.059 11.7467 68.4618 12.9863 67.6781 13.5557L60.7634 18.5795C60.4129 18.8342 60.2663 19.2855 60.4001 19.6976L63.0413 27.8262C63.3406 28.7475 62.2862 29.5137 61.5025 28.9443L54.5878 23.9205C54.2373 23.6658 53.7627 23.6658 53.4122 23.9205L46.4975 28.9443C45.7138 29.5137 44.6594 28.7475 44.9587 27.8262L47.5999 19.6976C47.7337 19.2855 47.5871 18.8342 47.2366 18.5795L40.3219 13.5557C39.5382 12.9863 39.941 11.7467 40.9097 11.7467L49.4567 11.7467C49.8899 11.7467 50.2739 11.4678 50.4078 11.0557L53.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M89.0489 2.92705C89.3483 2.00574 90.6517 2.00574 90.9511 2.92705L93.5922 11.0557C93.7261 11.4678 94.1101 11.7467 94.5433 11.7467L103.09 11.7467C104.059 11.7467 104.462 12.9863 103.678 13.5557L96.7634 18.5795C96.4129 18.8342 96.2663 19.2855 96.4001 19.6976L99.0413 27.8262C99.3406 28.7475 98.2862 29.5137 97.5025 28.9443L90.5878 23.9205C90.2373 23.6658 89.7627 23.6658 89.4122 23.9205L82.4975 28.9443C81.7138 29.5137 80.6594 28.7475 80.9587 27.8262L83.5999 19.6976C83.7337 19.2855 83.5871 18.8342 83.2366 18.5795L76.3219 13.5557C75.5382 12.9863 75.941 11.7467 76.9097 11.7467L85.4567 11.7467C85.8899 11.7467 86.2739 11.4678 86.4078 11.0557L89.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M125.049 2.92705C125.348 2.00574 126.652 2.00574 126.951 2.92705L129.592 11.0557C129.726 11.4678 130.11 11.7467 130.543 11.7467L139.09 11.7467C140.059 11.7467 140.462 12.9863 139.678 13.5557L132.763 18.5795C132.413 18.8342 132.266 19.2855 132.4 19.6976L135.041 27.8262C135.341 28.7475 134.286 29.5137 133.502 28.9443L126.588 23.9205C126.237 23.6658 125.763 23.6658 125.412 23.9205L118.498 28.9443C117.714 29.5137 116.659 28.7475 116.959 27.8262L119.6 19.6976C119.734 19.2855 119.587 18.8342 119.237 18.5795L112.322 13.5557C111.538 12.9863 111.941 11.7467 112.91 11.7467L121.457 11.7467C121.89 11.7467 122.274 11.4678 122.408 11.0557L125.049 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M162.049 2.92705C162.348 2.00574 163.652 2.00574 163.951 2.92705L166.592 11.0557C166.726 11.4678 167.11 11.7467 167.543 11.7467L176.09 11.7467C177.059 11.7467 177.462 12.9863 176.678 13.5557L169.763 18.5795C169.413 18.8342 169.266 19.2855 169.4 19.6976L172.041 27.8262C172.341 28.7475 171.286 29.5137 170.502 28.9443L163.588 23.9205C163.237 23.6658 162.763 23.6658 162.412 23.9205L155.498 28.9443C154.714 29.5137 153.659 28.7475 153.959 27.8262L156.6 19.6976C156.734 19.2855 156.587 18.8342 156.237 18.5795L149.322 13.5557C148.538 12.9863 148.941 11.7467 149.91 11.7467L158.457 11.7467C158.89 11.7467 159.274 11.4678 159.408 11.0557L162.049 2.92705Z" fill="#FDAF3B"/>
+                              </svg>
+                        </div>
+                    </div>
+                    <div class="test2">
+                        <div style="display: flex;">
+                            <div>
+                                <img style="border-radius: 50px;" src="img/test1.png" alt="" srcset="">
+                            </div>
+                            <div>
+                             <h5>Kathleen Smith</h5>
+                            <p>Fuel Company</p>   
+                            </div>
+                            
+                        </div>
+                        <p style="color: #666C89;">
+                            Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+                        </p>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="180" height="34" viewBox="0 0 180 34" fill="none">
+                                <path d="M16.0489 2.92705C16.3483 2.00574 17.6517 2.00574 17.9511 2.92705L20.5922 11.0557C20.7261 11.4678 21.1101 11.7467 21.5433 11.7467L30.0903 11.7467C31.059 11.7467 31.4618 12.9863 30.6781 13.5557L23.7634 18.5795C23.4129 18.8342 23.2663 19.2855 23.4001 19.6976L26.0413 27.8262C26.3406 28.7475 25.2862 29.5137 24.5025 28.9443L17.5878 23.9205C17.2373 23.6658 16.7627 23.6658 16.4122 23.9205L9.49755 28.9443C8.71383 29.5137 7.65936 28.7475 7.95871 27.8262L10.5999 19.6976C10.7337 19.2855 10.5871 18.8342 10.2366 18.5795L3.32194 13.5557C2.53822 12.9863 2.941 11.7467 3.90972 11.7467L12.4567 11.7467C12.8899 11.7467 13.2739 11.4678 13.4078 11.0557L16.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M53.0489 2.92705C53.3483 2.00574 54.6517 2.00574 54.9511 2.92705L57.5922 11.0557C57.7261 11.4678 58.1101 11.7467 58.5433 11.7467L67.0903 11.7467C68.059 11.7467 68.4618 12.9863 67.6781 13.5557L60.7634 18.5795C60.4129 18.8342 60.2663 19.2855 60.4001 19.6976L63.0413 27.8262C63.3406 28.7475 62.2862 29.5137 61.5025 28.9443L54.5878 23.9205C54.2373 23.6658 53.7627 23.6658 53.4122 23.9205L46.4975 28.9443C45.7138 29.5137 44.6594 28.7475 44.9587 27.8262L47.5999 19.6976C47.7337 19.2855 47.5871 18.8342 47.2366 18.5795L40.3219 13.5557C39.5382 12.9863 39.941 11.7467 40.9097 11.7467L49.4567 11.7467C49.8899 11.7467 50.2739 11.4678 50.4078 11.0557L53.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M89.0489 2.92705C89.3483 2.00574 90.6517 2.00574 90.9511 2.92705L93.5922 11.0557C93.7261 11.4678 94.1101 11.7467 94.5433 11.7467L103.09 11.7467C104.059 11.7467 104.462 12.9863 103.678 13.5557L96.7634 18.5795C96.4129 18.8342 96.2663 19.2855 96.4001 19.6976L99.0413 27.8262C99.3406 28.7475 98.2862 29.5137 97.5025 28.9443L90.5878 23.9205C90.2373 23.6658 89.7627 23.6658 89.4122 23.9205L82.4975 28.9443C81.7138 29.5137 80.6594 28.7475 80.9587 27.8262L83.5999 19.6976C83.7337 19.2855 83.5871 18.8342 83.2366 18.5795L76.3219 13.5557C75.5382 12.9863 75.941 11.7467 76.9097 11.7467L85.4567 11.7467C85.8899 11.7467 86.2739 11.4678 86.4078 11.0557L89.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M125.049 2.92705C125.348 2.00574 126.652 2.00574 126.951 2.92705L129.592 11.0557C129.726 11.4678 130.11 11.7467 130.543 11.7467L139.09 11.7467C140.059 11.7467 140.462 12.9863 139.678 13.5557L132.763 18.5795C132.413 18.8342 132.266 19.2855 132.4 19.6976L135.041 27.8262C135.341 28.7475 134.286 29.5137 133.502 28.9443L126.588 23.9205C126.237 23.6658 125.763 23.6658 125.412 23.9205L118.498 28.9443C117.714 29.5137 116.659 28.7475 116.959 27.8262L119.6 19.6976C119.734 19.2855 119.587 18.8342 119.237 18.5795L112.322 13.5557C111.538 12.9863 111.941 11.7467 112.91 11.7467L121.457 11.7467C121.89 11.7467 122.274 11.4678 122.408 11.0557L125.049 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M162.049 2.92705C162.348 2.00574 163.652 2.00574 163.951 2.92705L166.592 11.0557C166.726 11.4678 167.11 11.7467 167.543 11.7467L176.09 11.7467C177.059 11.7467 177.462 12.9863 176.678 13.5557L169.763 18.5795C169.413 18.8342 169.266 19.2855 169.4 19.6976L172.041 27.8262C172.341 28.7475 171.286 29.5137 170.502 28.9443L163.588 23.9205C163.237 23.6658 162.763 23.6658 162.412 23.9205L155.498 28.9443C154.714 29.5137 153.659 28.7475 153.959 27.8262L156.6 19.6976C156.734 19.2855 156.587 18.8342 156.237 18.5795L149.322 13.5557C148.538 12.9863 148.941 11.7467 149.91 11.7467L158.457 11.7467C158.89 11.7467 159.274 11.4678 159.408 11.0557L162.049 2.92705Z" fill="#FDAF3B"/>
+                              </svg>
+                        </div>
+                    </div>
+                    <div class="test2 none">
+                        <div style="display: flex;">
+                            <div>
+                                <img style="border-radius: 50px;" src="img/test1.png" alt="" srcset="">
+                            </div>
+                            <div>
+                             <h5>Kathleen Smith</h5>
+                            <p>Fuel Company</p>   
+                            </div>
+                            
+                        </div>
+                        <p style="color: #666C89;">
+                            Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+                        </p>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="180" height="34" viewBox="0 0 180 34" fill="none">
+                                <path d="M16.0489 2.92705C16.3483 2.00574 17.6517 2.00574 17.9511 2.92705L20.5922 11.0557C20.7261 11.4678 21.1101 11.7467 21.5433 11.7467L30.0903 11.7467C31.059 11.7467 31.4618 12.9863 30.6781 13.5557L23.7634 18.5795C23.4129 18.8342 23.2663 19.2855 23.4001 19.6976L26.0413 27.8262C26.3406 28.7475 25.2862 29.5137 24.5025 28.9443L17.5878 23.9205C17.2373 23.6658 16.7627 23.6658 16.4122 23.9205L9.49755 28.9443C8.71383 29.5137 7.65936 28.7475 7.95871 27.8262L10.5999 19.6976C10.7337 19.2855 10.5871 18.8342 10.2366 18.5795L3.32194 13.5557C2.53822 12.9863 2.941 11.7467 3.90972 11.7467L12.4567 11.7467C12.8899 11.7467 13.2739 11.4678 13.4078 11.0557L16.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M53.0489 2.92705C53.3483 2.00574 54.6517 2.00574 54.9511 2.92705L57.5922 11.0557C57.7261 11.4678 58.1101 11.7467 58.5433 11.7467L67.0903 11.7467C68.059 11.7467 68.4618 12.9863 67.6781 13.5557L60.7634 18.5795C60.4129 18.8342 60.2663 19.2855 60.4001 19.6976L63.0413 27.8262C63.3406 28.7475 62.2862 29.5137 61.5025 28.9443L54.5878 23.9205C54.2373 23.6658 53.7627 23.6658 53.4122 23.9205L46.4975 28.9443C45.7138 29.5137 44.6594 28.7475 44.9587 27.8262L47.5999 19.6976C47.7337 19.2855 47.5871 18.8342 47.2366 18.5795L40.3219 13.5557C39.5382 12.9863 39.941 11.7467 40.9097 11.7467L49.4567 11.7467C49.8899 11.7467 50.2739 11.4678 50.4078 11.0557L53.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M89.0489 2.92705C89.3483 2.00574 90.6517 2.00574 90.9511 2.92705L93.5922 11.0557C93.7261 11.4678 94.1101 11.7467 94.5433 11.7467L103.09 11.7467C104.059 11.7467 104.462 12.9863 103.678 13.5557L96.7634 18.5795C96.4129 18.8342 96.2663 19.2855 96.4001 19.6976L99.0413 27.8262C99.3406 28.7475 98.2862 29.5137 97.5025 28.9443L90.5878 23.9205C90.2373 23.6658 89.7627 23.6658 89.4122 23.9205L82.4975 28.9443C81.7138 29.5137 80.6594 28.7475 80.9587 27.8262L83.5999 19.6976C83.7337 19.2855 83.5871 18.8342 83.2366 18.5795L76.3219 13.5557C75.5382 12.9863 75.941 11.7467 76.9097 11.7467L85.4567 11.7467C85.8899 11.7467 86.2739 11.4678 86.4078 11.0557L89.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M125.049 2.92705C125.348 2.00574 126.652 2.00574 126.951 2.92705L129.592 11.0557C129.726 11.4678 130.11 11.7467 130.543 11.7467L139.09 11.7467C140.059 11.7467 140.462 12.9863 139.678 13.5557L132.763 18.5795C132.413 18.8342 132.266 19.2855 132.4 19.6976L135.041 27.8262C135.341 28.7475 134.286 29.5137 133.502 28.9443L126.588 23.9205C126.237 23.6658 125.763 23.6658 125.412 23.9205L118.498 28.9443C117.714 29.5137 116.659 28.7475 116.959 27.8262L119.6 19.6976C119.734 19.2855 119.587 18.8342 119.237 18.5795L112.322 13.5557C111.538 12.9863 111.941 11.7467 112.91 11.7467L121.457 11.7467C121.89 11.7467 122.274 11.4678 122.408 11.0557L125.049 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M162.049 2.92705C162.348 2.00574 163.652 2.00574 163.951 2.92705L166.592 11.0557C166.726 11.4678 167.11 11.7467 167.543 11.7467L176.09 11.7467C177.059 11.7467 177.462 12.9863 176.678 13.5557L169.763 18.5795C169.413 18.8342 169.266 19.2855 169.4 19.6976L172.041 27.8262C172.341 28.7475 171.286 29.5137 170.502 28.9443L163.588 23.9205C163.237 23.6658 162.763 23.6658 162.412 23.9205L155.498 28.9443C154.714 29.5137 153.659 28.7475 153.959 27.8262L156.6 19.6976C156.734 19.2855 156.587 18.8342 156.237 18.5795L149.322 13.5557C148.538 12.9863 148.941 11.7467 149.91 11.7467L158.457 11.7467C158.89 11.7467 159.274 11.4678 159.408 11.0557L162.049 2.92705Z" fill="#FDAF3B"/>
+                              </svg>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="test">
+                    <div class="test3 none">
+                        <div style="display: flex;">
+                            <div>
+                                <img style="border-radius: 50px;" src="img/Phot.png" alt="" srcset="">
+                            </div>
+                            <div>
+                             <h5 style="color: #fff;">Kathleen Smith</h5>
+                            <p style="color: #fff;">Fuel Company</p>   
+                            </div>
+                            
+                        </div>
+                        <p style="color: #fff;">
+                            Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+                        </p>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="180" height="34" viewBox="0 0 180 34" fill="none">
+                                <path d="M16.0489 2.92705C16.3483 2.00574 17.6517 2.00574 17.9511 2.92705L20.5922 11.0557C20.7261 11.4678 21.1101 11.7467 21.5433 11.7467L30.0903 11.7467C31.059 11.7467 31.4618 12.9863 30.6781 13.5557L23.7634 18.5795C23.4129 18.8342 23.2663 19.2855 23.4001 19.6976L26.0413 27.8262C26.3406 28.7475 25.2862 29.5137 24.5025 28.9443L17.5878 23.9205C17.2373 23.6658 16.7627 23.6658 16.4122 23.9205L9.49755 28.9443C8.71383 29.5137 7.65936 28.7475 7.95871 27.8262L10.5999 19.6976C10.7337 19.2855 10.5871 18.8342 10.2366 18.5795L3.32194 13.5557C2.53822 12.9863 2.941 11.7467 3.90972 11.7467L12.4567 11.7467C12.8899 11.7467 13.2739 11.4678 13.4078 11.0557L16.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M53.0489 2.92705C53.3483 2.00574 54.6517 2.00574 54.9511 2.92705L57.5922 11.0557C57.7261 11.4678 58.1101 11.7467 58.5433 11.7467L67.0903 11.7467C68.059 11.7467 68.4618 12.9863 67.6781 13.5557L60.7634 18.5795C60.4129 18.8342 60.2663 19.2855 60.4001 19.6976L63.0413 27.8262C63.3406 28.7475 62.2862 29.5137 61.5025 28.9443L54.5878 23.9205C54.2373 23.6658 53.7627 23.6658 53.4122 23.9205L46.4975 28.9443C45.7138 29.5137 44.6594 28.7475 44.9587 27.8262L47.5999 19.6976C47.7337 19.2855 47.5871 18.8342 47.2366 18.5795L40.3219 13.5557C39.5382 12.9863 39.941 11.7467 40.9097 11.7467L49.4567 11.7467C49.8899 11.7467 50.2739 11.4678 50.4078 11.0557L53.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M89.0489 2.92705C89.3483 2.00574 90.6517 2.00574 90.9511 2.92705L93.5922 11.0557C93.7261 11.4678 94.1101 11.7467 94.5433 11.7467L103.09 11.7467C104.059 11.7467 104.462 12.9863 103.678 13.5557L96.7634 18.5795C96.4129 18.8342 96.2663 19.2855 96.4001 19.6976L99.0413 27.8262C99.3406 28.7475 98.2862 29.5137 97.5025 28.9443L90.5878 23.9205C90.2373 23.6658 89.7627 23.6658 89.4122 23.9205L82.4975 28.9443C81.7138 29.5137 80.6594 28.7475 80.9587 27.8262L83.5999 19.6976C83.7337 19.2855 83.5871 18.8342 83.2366 18.5795L76.3219 13.5557C75.5382 12.9863 75.941 11.7467 76.9097 11.7467L85.4567 11.7467C85.8899 11.7467 86.2739 11.4678 86.4078 11.0557L89.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M125.049 2.92705C125.348 2.00574 126.652 2.00574 126.951 2.92705L129.592 11.0557C129.726 11.4678 130.11 11.7467 130.543 11.7467L139.09 11.7467C140.059 11.7467 140.462 12.9863 139.678 13.5557L132.763 18.5795C132.413 18.8342 132.266 19.2855 132.4 19.6976L135.041 27.8262C135.341 28.7475 134.286 29.5137 133.502 28.9443L126.588 23.9205C126.237 23.6658 125.763 23.6658 125.412 23.9205L118.498 28.9443C117.714 29.5137 116.659 28.7475 116.959 27.8262L119.6 19.6976C119.734 19.2855 119.587 18.8342 119.237 18.5795L112.322 13.5557C111.538 12.9863 111.941 11.7467 112.91 11.7467L121.457 11.7467C121.89 11.7467 122.274 11.4678 122.408 11.0557L125.049 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M162.049 2.92705C162.348 2.00574 163.652 2.00574 163.951 2.92705L166.592 11.0557C166.726 11.4678 167.11 11.7467 167.543 11.7467L176.09 11.7467C177.059 11.7467 177.462 12.9863 176.678 13.5557L169.763 18.5795C169.413 18.8342 169.266 19.2855 169.4 19.6976L172.041 27.8262C172.341 28.7475 171.286 29.5137 170.502 28.9443L163.588 23.9205C163.237 23.6658 162.763 23.6658 162.412 23.9205L155.498 28.9443C154.714 29.5137 153.659 28.7475 153.959 27.8262L156.6 19.6976C156.734 19.2855 156.587 18.8342 156.237 18.5795L149.322 13.5557C148.538 12.9863 148.941 11.7467 149.91 11.7467L158.457 11.7467C158.89 11.7467 159.274 11.4678 159.408 11.0557L162.049 2.92705Z" fill="#FDAF3B"/>
+                              </svg>
+                        </div>
+                    </div>
+                    <div class="test3">
+                        <div style="display: flex;">
+                            <div>
+                                <img style="border-radius: 50px;" src="img/Phot.png" alt="" srcset="">
+                            </div>
+                            <div>
+                             <h5 style="color: #fff;">Kathleen Smith</h5>
+                            <p style="color:white;" >Fuel Company</p>   
+                            </div>
+                            
+                        </div>
+                        <p style="color: #fff;">
+                            Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+                        </p>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="180" height="34" viewBox="0 0 180 34" fill="none">
+                                <path d="M16.0489 2.92705C16.3483 2.00574 17.6517 2.00574 17.9511 2.92705L20.5922 11.0557C20.7261 11.4678 21.1101 11.7467 21.5433 11.7467L30.0903 11.7467C31.059 11.7467 31.4618 12.9863 30.6781 13.5557L23.7634 18.5795C23.4129 18.8342 23.2663 19.2855 23.4001 19.6976L26.0413 27.8262C26.3406 28.7475 25.2862 29.5137 24.5025 28.9443L17.5878 23.9205C17.2373 23.6658 16.7627 23.6658 16.4122 23.9205L9.49755 28.9443C8.71383 29.5137 7.65936 28.7475 7.95871 27.8262L10.5999 19.6976C10.7337 19.2855 10.5871 18.8342 10.2366 18.5795L3.32194 13.5557C2.53822 12.9863 2.941 11.7467 3.90972 11.7467L12.4567 11.7467C12.8899 11.7467 13.2739 11.4678 13.4078 11.0557L16.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M53.0489 2.92705C53.3483 2.00574 54.6517 2.00574 54.9511 2.92705L57.5922 11.0557C57.7261 11.4678 58.1101 11.7467 58.5433 11.7467L67.0903 11.7467C68.059 11.7467 68.4618 12.9863 67.6781 13.5557L60.7634 18.5795C60.4129 18.8342 60.2663 19.2855 60.4001 19.6976L63.0413 27.8262C63.3406 28.7475 62.2862 29.5137 61.5025 28.9443L54.5878 23.9205C54.2373 23.6658 53.7627 23.6658 53.4122 23.9205L46.4975 28.9443C45.7138 29.5137 44.6594 28.7475 44.9587 27.8262L47.5999 19.6976C47.7337 19.2855 47.5871 18.8342 47.2366 18.5795L40.3219 13.5557C39.5382 12.9863 39.941 11.7467 40.9097 11.7467L49.4567 11.7467C49.8899 11.7467 50.2739 11.4678 50.4078 11.0557L53.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M89.0489 2.92705C89.3483 2.00574 90.6517 2.00574 90.9511 2.92705L93.5922 11.0557C93.7261 11.4678 94.1101 11.7467 94.5433 11.7467L103.09 11.7467C104.059 11.7467 104.462 12.9863 103.678 13.5557L96.7634 18.5795C96.4129 18.8342 96.2663 19.2855 96.4001 19.6976L99.0413 27.8262C99.3406 28.7475 98.2862 29.5137 97.5025 28.9443L90.5878 23.9205C90.2373 23.6658 89.7627 23.6658 89.4122 23.9205L82.4975 28.9443C81.7138 29.5137 80.6594 28.7475 80.9587 27.8262L83.5999 19.6976C83.7337 19.2855 83.5871 18.8342 83.2366 18.5795L76.3219 13.5557C75.5382 12.9863 75.941 11.7467 76.9097 11.7467L85.4567 11.7467C85.8899 11.7467 86.2739 11.4678 86.4078 11.0557L89.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M125.049 2.92705C125.348 2.00574 126.652 2.00574 126.951 2.92705L129.592 11.0557C129.726 11.4678 130.11 11.7467 130.543 11.7467L139.09 11.7467C140.059 11.7467 140.462 12.9863 139.678 13.5557L132.763 18.5795C132.413 18.8342 132.266 19.2855 132.4 19.6976L135.041 27.8262C135.341 28.7475 134.286 29.5137 133.502 28.9443L126.588 23.9205C126.237 23.6658 125.763 23.6658 125.412 23.9205L118.498 28.9443C117.714 29.5137 116.659 28.7475 116.959 27.8262L119.6 19.6976C119.734 19.2855 119.587 18.8342 119.237 18.5795L112.322 13.5557C111.538 12.9863 111.941 11.7467 112.91 11.7467L121.457 11.7467C121.89 11.7467 122.274 11.4678 122.408 11.0557L125.049 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M162.049 2.92705C162.348 2.00574 163.652 2.00574 163.951 2.92705L166.592 11.0557C166.726 11.4678 167.11 11.7467 167.543 11.7467L176.09 11.7467C177.059 11.7467 177.462 12.9863 176.678 13.5557L169.763 18.5795C169.413 18.8342 169.266 19.2855 169.4 19.6976L172.041 27.8262C172.341 28.7475 171.286 29.5137 170.502 28.9443L163.588 23.9205C163.237 23.6658 162.763 23.6658 162.412 23.9205L155.498 28.9443C154.714 29.5137 153.659 28.7475 153.959 27.8262L156.6 19.6976C156.734 19.2855 156.587 18.8342 156.237 18.5795L149.322 13.5557C148.538 12.9863 148.941 11.7467 149.91 11.7467L158.457 11.7467C158.89 11.7467 159.274 11.4678 159.408 11.0557L162.049 2.92705Z" fill="#FDAF3B"/>
+                              </svg>
+                        </div>
+                    </div>
+                    <div class="test3 none">
+                        <div style="display: flex; width: 100%;">
+                            <div>
+                                <img style="border-radius: 50px;" src="img/Phot.png" alt="" srcset="">
+                            </div>
+                            <div>
+                             <h5 style="color: #fff;">Kathleen Smith</h5>
+                            <p style="color: #fff;">Fuel Company</p>   
+                            </div>
+                            
+                        </div>
+                        <p style="color: #fff;">
+                            Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+                        </p>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="180" height="34" viewBox="0 0 180 34" fill="none">
+                                <path d="M16.0489 2.92705C16.3483 2.00574 17.6517 2.00574 17.9511 2.92705L20.5922 11.0557C20.7261 11.4678 21.1101 11.7467 21.5433 11.7467L30.0903 11.7467C31.059 11.7467 31.4618 12.9863 30.6781 13.5557L23.7634 18.5795C23.4129 18.8342 23.2663 19.2855 23.4001 19.6976L26.0413 27.8262C26.3406 28.7475 25.2862 29.5137 24.5025 28.9443L17.5878 23.9205C17.2373 23.6658 16.7627 23.6658 16.4122 23.9205L9.49755 28.9443C8.71383 29.5137 7.65936 28.7475 7.95871 27.8262L10.5999 19.6976C10.7337 19.2855 10.5871 18.8342 10.2366 18.5795L3.32194 13.5557C2.53822 12.9863 2.941 11.7467 3.90972 11.7467L12.4567 11.7467C12.8899 11.7467 13.2739 11.4678 13.4078 11.0557L16.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M53.0489 2.92705C53.3483 2.00574 54.6517 2.00574 54.9511 2.92705L57.5922 11.0557C57.7261 11.4678 58.1101 11.7467 58.5433 11.7467L67.0903 11.7467C68.059 11.7467 68.4618 12.9863 67.6781 13.5557L60.7634 18.5795C60.4129 18.8342 60.2663 19.2855 60.4001 19.6976L63.0413 27.8262C63.3406 28.7475 62.2862 29.5137 61.5025 28.9443L54.5878 23.9205C54.2373 23.6658 53.7627 23.6658 53.4122 23.9205L46.4975 28.9443C45.7138 29.5137 44.6594 28.7475 44.9587 27.8262L47.5999 19.6976C47.7337 19.2855 47.5871 18.8342 47.2366 18.5795L40.3219 13.5557C39.5382 12.9863 39.941 11.7467 40.9097 11.7467L49.4567 11.7467C49.8899 11.7467 50.2739 11.4678 50.4078 11.0557L53.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M89.0489 2.92705C89.3483 2.00574 90.6517 2.00574 90.9511 2.92705L93.5922 11.0557C93.7261 11.4678 94.1101 11.7467 94.5433 11.7467L103.09 11.7467C104.059 11.7467 104.462 12.9863 103.678 13.5557L96.7634 18.5795C96.4129 18.8342 96.2663 19.2855 96.4001 19.6976L99.0413 27.8262C99.3406 28.7475 98.2862 29.5137 97.5025 28.9443L90.5878 23.9205C90.2373 23.6658 89.7627 23.6658 89.4122 23.9205L82.4975 28.9443C81.7138 29.5137 80.6594 28.7475 80.9587 27.8262L83.5999 19.6976C83.7337 19.2855 83.5871 18.8342 83.2366 18.5795L76.3219 13.5557C75.5382 12.9863 75.941 11.7467 76.9097 11.7467L85.4567 11.7467C85.8899 11.7467 86.2739 11.4678 86.4078 11.0557L89.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M125.049 2.92705C125.348 2.00574 126.652 2.00574 126.951 2.92705L129.592 11.0557C129.726 11.4678 130.11 11.7467 130.543 11.7467L139.09 11.7467C140.059 11.7467 140.462 12.9863 139.678 13.5557L132.763 18.5795C132.413 18.8342 132.266 19.2855 132.4 19.6976L135.041 27.8262C135.341 28.7475 134.286 29.5137 133.502 28.9443L126.588 23.9205C126.237 23.6658 125.763 23.6658 125.412 23.9205L118.498 28.9443C117.714 29.5137 116.659 28.7475 116.959 27.8262L119.6 19.6976C119.734 19.2855 119.587 18.8342 119.237 18.5795L112.322 13.5557C111.538 12.9863 111.941 11.7467 112.91 11.7467L121.457 11.7467C121.89 11.7467 122.274 11.4678 122.408 11.0557L125.049 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M162.049 2.92705C162.348 2.00574 163.652 2.00574 163.951 2.92705L166.592 11.0557C166.726 11.4678 167.11 11.7467 167.543 11.7467L176.09 11.7467C177.059 11.7467 177.462 12.9863 176.678 13.5557L169.763 18.5795C169.413 18.8342 169.266 19.2855 169.4 19.6976L172.041 27.8262C172.341 28.7475 171.286 29.5137 170.502 28.9443L163.588 23.9205C163.237 23.6658 162.763 23.6658 162.412 23.9205L155.498 28.9443C154.714 29.5137 153.659 28.7475 153.959 27.8262L156.6 19.6976C156.734 19.2855 156.587 18.8342 156.237 18.5795L149.322 13.5557C148.538 12.9863 148.941 11.7467 149.91 11.7467L158.457 11.7467C158.89 11.7467 159.274 11.4678 159.408 11.0557L162.049 2.92705Z" fill="#FDAF3B"/>
+                              </svg>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="test">
+                    <div class="test4 none">
+                        <div style="display: flex;width: 100%;">
+                            <div>
+                                <img style="border-radius: 50px;" src="img/Phot.png" alt="" srcset="">
+                            </div>
+                            <div>
+                             <h5 style="color: #fff;">Kathleen Smith</h5>
+                            <p style="color: #fff;">Fuel Company</p>   
+                            </div>
+                            
+                        </div>
+                        <p>
+                            Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+                        </p>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="180" height="34" viewBox="0 0 180 34" fill="none">
+                                <path d="M16.0489 2.92705C16.3483 2.00574 17.6517 2.00574 17.9511 2.92705L20.5922 11.0557C20.7261 11.4678 21.1101 11.7467 21.5433 11.7467L30.0903 11.7467C31.059 11.7467 31.4618 12.9863 30.6781 13.5557L23.7634 18.5795C23.4129 18.8342 23.2663 19.2855 23.4001 19.6976L26.0413 27.8262C26.3406 28.7475 25.2862 29.5137 24.5025 28.9443L17.5878 23.9205C17.2373 23.6658 16.7627 23.6658 16.4122 23.9205L9.49755 28.9443C8.71383 29.5137 7.65936 28.7475 7.95871 27.8262L10.5999 19.6976C10.7337 19.2855 10.5871 18.8342 10.2366 18.5795L3.32194 13.5557C2.53822 12.9863 2.941 11.7467 3.90972 11.7467L12.4567 11.7467C12.8899 11.7467 13.2739 11.4678 13.4078 11.0557L16.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M53.0489 2.92705C53.3483 2.00574 54.6517 2.00574 54.9511 2.92705L57.5922 11.0557C57.7261 11.4678 58.1101 11.7467 58.5433 11.7467L67.0903 11.7467C68.059 11.7467 68.4618 12.9863 67.6781 13.5557L60.7634 18.5795C60.4129 18.8342 60.2663 19.2855 60.4001 19.6976L63.0413 27.8262C63.3406 28.7475 62.2862 29.5137 61.5025 28.9443L54.5878 23.9205C54.2373 23.6658 53.7627 23.6658 53.4122 23.9205L46.4975 28.9443C45.7138 29.5137 44.6594 28.7475 44.9587 27.8262L47.5999 19.6976C47.7337 19.2855 47.5871 18.8342 47.2366 18.5795L40.3219 13.5557C39.5382 12.9863 39.941 11.7467 40.9097 11.7467L49.4567 11.7467C49.8899 11.7467 50.2739 11.4678 50.4078 11.0557L53.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M89.0489 2.92705C89.3483 2.00574 90.6517 2.00574 90.9511 2.92705L93.5922 11.0557C93.7261 11.4678 94.1101 11.7467 94.5433 11.7467L103.09 11.7467C104.059 11.7467 104.462 12.9863 103.678 13.5557L96.7634 18.5795C96.4129 18.8342 96.2663 19.2855 96.4001 19.6976L99.0413 27.8262C99.3406 28.7475 98.2862 29.5137 97.5025 28.9443L90.5878 23.9205C90.2373 23.6658 89.7627 23.6658 89.4122 23.9205L82.4975 28.9443C81.7138 29.5137 80.6594 28.7475 80.9587 27.8262L83.5999 19.6976C83.7337 19.2855 83.5871 18.8342 83.2366 18.5795L76.3219 13.5557C75.5382 12.9863 75.941 11.7467 76.9097 11.7467L85.4567 11.7467C85.8899 11.7467 86.2739 11.4678 86.4078 11.0557L89.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M125.049 2.92705C125.348 2.00574 126.652 2.00574 126.951 2.92705L129.592 11.0557C129.726 11.4678 130.11 11.7467 130.543 11.7467L139.09 11.7467C140.059 11.7467 140.462 12.9863 139.678 13.5557L132.763 18.5795C132.413 18.8342 132.266 19.2855 132.4 19.6976L135.041 27.8262C135.341 28.7475 134.286 29.5137 133.502 28.9443L126.588 23.9205C126.237 23.6658 125.763 23.6658 125.412 23.9205L118.498 28.9443C117.714 29.5137 116.659 28.7475 116.959 27.8262L119.6 19.6976C119.734 19.2855 119.587 18.8342 119.237 18.5795L112.322 13.5557C111.538 12.9863 111.941 11.7467 112.91 11.7467L121.457 11.7467C121.89 11.7467 122.274 11.4678 122.408 11.0557L125.049 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M162.049 2.92705C162.348 2.00574 163.652 2.00574 163.951 2.92705L166.592 11.0557C166.726 11.4678 167.11 11.7467 167.543 11.7467L176.09 11.7467C177.059 11.7467 177.462 12.9863 176.678 13.5557L169.763 18.5795C169.413 18.8342 169.266 19.2855 169.4 19.6976L172.041 27.8262C172.341 28.7475 171.286 29.5137 170.502 28.9443L163.588 23.9205C163.237 23.6658 162.763 23.6658 162.412 23.9205L155.498 28.9443C154.714 29.5137 153.659 28.7475 153.959 27.8262L156.6 19.6976C156.734 19.2855 156.587 18.8342 156.237 18.5795L149.322 13.5557C148.538 12.9863 148.941 11.7467 149.91 11.7467L158.457 11.7467C158.89 11.7467 159.274 11.4678 159.408 11.0557L162.049 2.92705Z" fill="#FDAF3B"/>
+                              </svg>
+                        </div>
+                    </div>
+                    <div class="test4 none">
+                        <div style="display: flex; width: 100%;">
+                            <div>
+                                <img style="border-radius: 50px;" src="img/Phot.png" alt="" srcset="">
+                            </div>
+                            <div>
+                             <h5 style="color: #fff;">Kathleen Smith</h5>
+                            <p style="color: #fff;">Fuel Company</p>   
+                            </div>
+                            
+                        </div>
+                        <p style="color: #fff;">
+                            Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+                        </p>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="180" height="34" viewBox="0 0 180 34" fill="none">
+                                <path d="M16.0489 2.92705C16.3483 2.00574 17.6517 2.00574 17.9511 2.92705L20.5922 11.0557C20.7261 11.4678 21.1101 11.7467 21.5433 11.7467L30.0903 11.7467C31.059 11.7467 31.4618 12.9863 30.6781 13.5557L23.7634 18.5795C23.4129 18.8342 23.2663 19.2855 23.4001 19.6976L26.0413 27.8262C26.3406 28.7475 25.2862 29.5137 24.5025 28.9443L17.5878 23.9205C17.2373 23.6658 16.7627 23.6658 16.4122 23.9205L9.49755 28.9443C8.71383 29.5137 7.65936 28.7475 7.95871 27.8262L10.5999 19.6976C10.7337 19.2855 10.5871 18.8342 10.2366 18.5795L3.32194 13.5557C2.53822 12.9863 2.941 11.7467 3.90972 11.7467L12.4567 11.7467C12.8899 11.7467 13.2739 11.4678 13.4078 11.0557L16.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M53.0489 2.92705C53.3483 2.00574 54.6517 2.00574 54.9511 2.92705L57.5922 11.0557C57.7261 11.4678 58.1101 11.7467 58.5433 11.7467L67.0903 11.7467C68.059 11.7467 68.4618 12.9863 67.6781 13.5557L60.7634 18.5795C60.4129 18.8342 60.2663 19.2855 60.4001 19.6976L63.0413 27.8262C63.3406 28.7475 62.2862 29.5137 61.5025 28.9443L54.5878 23.9205C54.2373 23.6658 53.7627 23.6658 53.4122 23.9205L46.4975 28.9443C45.7138 29.5137 44.6594 28.7475 44.9587 27.8262L47.5999 19.6976C47.7337 19.2855 47.5871 18.8342 47.2366 18.5795L40.3219 13.5557C39.5382 12.9863 39.941 11.7467 40.9097 11.7467L49.4567 11.7467C49.8899 11.7467 50.2739 11.4678 50.4078 11.0557L53.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M89.0489 2.92705C89.3483 2.00574 90.6517 2.00574 90.9511 2.92705L93.5922 11.0557C93.7261 11.4678 94.1101 11.7467 94.5433 11.7467L103.09 11.7467C104.059 11.7467 104.462 12.9863 103.678 13.5557L96.7634 18.5795C96.4129 18.8342 96.2663 19.2855 96.4001 19.6976L99.0413 27.8262C99.3406 28.7475 98.2862 29.5137 97.5025 28.9443L90.5878 23.9205C90.2373 23.6658 89.7627 23.6658 89.4122 23.9205L82.4975 28.9443C81.7138 29.5137 80.6594 28.7475 80.9587 27.8262L83.5999 19.6976C83.7337 19.2855 83.5871 18.8342 83.2366 18.5795L76.3219 13.5557C75.5382 12.9863 75.941 11.7467 76.9097 11.7467L85.4567 11.7467C85.8899 11.7467 86.2739 11.4678 86.4078 11.0557L89.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M125.049 2.92705C125.348 2.00574 126.652 2.00574 126.951 2.92705L129.592 11.0557C129.726 11.4678 130.11 11.7467 130.543 11.7467L139.09 11.7467C140.059 11.7467 140.462 12.9863 139.678 13.5557L132.763 18.5795C132.413 18.8342 132.266 19.2855 132.4 19.6976L135.041 27.8262C135.341 28.7475 134.286 29.5137 133.502 28.9443L126.588 23.9205C126.237 23.6658 125.763 23.6658 125.412 23.9205L118.498 28.9443C117.714 29.5137 116.659 28.7475 116.959 27.8262L119.6 19.6976C119.734 19.2855 119.587 18.8342 119.237 18.5795L112.322 13.5557C111.538 12.9863 111.941 11.7467 112.91 11.7467L121.457 11.7467C121.89 11.7467 122.274 11.4678 122.408 11.0557L125.049 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M162.049 2.92705C162.348 2.00574 163.652 2.00574 163.951 2.92705L166.592 11.0557C166.726 11.4678 167.11 11.7467 167.543 11.7467L176.09 11.7467C177.059 11.7467 177.462 12.9863 176.678 13.5557L169.763 18.5795C169.413 18.8342 169.266 19.2855 169.4 19.6976L172.041 27.8262C172.341 28.7475 171.286 29.5137 170.502 28.9443L163.588 23.9205C163.237 23.6658 162.763 23.6658 162.412 23.9205L155.498 28.9443C154.714 29.5137 153.659 28.7475 153.959 27.8262L156.6 19.6976C156.734 19.2855 156.587 18.8342 156.237 18.5795L149.322 13.5557C148.538 12.9863 148.941 11.7467 149.91 11.7467L158.457 11.7467C158.89 11.7467 159.274 11.4678 159.408 11.0557L162.049 2.92705Z" fill="#FDAF3B"/>
+                              </svg>
+                        </div>
+                    </div>
+                    <div class="test4">
+                        <div style="display: flex;width: 100%;">
+                            <div>
+                                <img style="border-radius: 50px;" src="img/Phot.png" alt="" srcset="">
+                            </div>
+                            <div>
+                             <h5 style="color: #fff;">Kathleen Smith</h5>
+                            <p style="color: #fff;">Fuel Company</p>   
+                            </div>
+                            
+                        </div>
+                        <p style="color: #fff;">
+                            Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+                        </p>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="180" height="34" viewBox="0 0 180 34" fill="none">
+                                <path d="M16.0489 2.92705C16.3483 2.00574 17.6517 2.00574 17.9511 2.92705L20.5922 11.0557C20.7261 11.4678 21.1101 11.7467 21.5433 11.7467L30.0903 11.7467C31.059 11.7467 31.4618 12.9863 30.6781 13.5557L23.7634 18.5795C23.4129 18.8342 23.2663 19.2855 23.4001 19.6976L26.0413 27.8262C26.3406 28.7475 25.2862 29.5137 24.5025 28.9443L17.5878 23.9205C17.2373 23.6658 16.7627 23.6658 16.4122 23.9205L9.49755 28.9443C8.71383 29.5137 7.65936 28.7475 7.95871 27.8262L10.5999 19.6976C10.7337 19.2855 10.5871 18.8342 10.2366 18.5795L3.32194 13.5557C2.53822 12.9863 2.941 11.7467 3.90972 11.7467L12.4567 11.7467C12.8899 11.7467 13.2739 11.4678 13.4078 11.0557L16.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M53.0489 2.92705C53.3483 2.00574 54.6517 2.00574 54.9511 2.92705L57.5922 11.0557C57.7261 11.4678 58.1101 11.7467 58.5433 11.7467L67.0903 11.7467C68.059 11.7467 68.4618 12.9863 67.6781 13.5557L60.7634 18.5795C60.4129 18.8342 60.2663 19.2855 60.4001 19.6976L63.0413 27.8262C63.3406 28.7475 62.2862 29.5137 61.5025 28.9443L54.5878 23.9205C54.2373 23.6658 53.7627 23.6658 53.4122 23.9205L46.4975 28.9443C45.7138 29.5137 44.6594 28.7475 44.9587 27.8262L47.5999 19.6976C47.7337 19.2855 47.5871 18.8342 47.2366 18.5795L40.3219 13.5557C39.5382 12.9863 39.941 11.7467 40.9097 11.7467L49.4567 11.7467C49.8899 11.7467 50.2739 11.4678 50.4078 11.0557L53.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M89.0489 2.92705C89.3483 2.00574 90.6517 2.00574 90.9511 2.92705L93.5922 11.0557C93.7261 11.4678 94.1101 11.7467 94.5433 11.7467L103.09 11.7467C104.059 11.7467 104.462 12.9863 103.678 13.5557L96.7634 18.5795C96.4129 18.8342 96.2663 19.2855 96.4001 19.6976L99.0413 27.8262C99.3406 28.7475 98.2862 29.5137 97.5025 28.9443L90.5878 23.9205C90.2373 23.6658 89.7627 23.6658 89.4122 23.9205L82.4975 28.9443C81.7138 29.5137 80.6594 28.7475 80.9587 27.8262L83.5999 19.6976C83.7337 19.2855 83.5871 18.8342 83.2366 18.5795L76.3219 13.5557C75.5382 12.9863 75.941 11.7467 76.9097 11.7467L85.4567 11.7467C85.8899 11.7467 86.2739 11.4678 86.4078 11.0557L89.0489 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M125.049 2.92705C125.348 2.00574 126.652 2.00574 126.951 2.92705L129.592 11.0557C129.726 11.4678 130.11 11.7467 130.543 11.7467L139.09 11.7467C140.059 11.7467 140.462 12.9863 139.678 13.5557L132.763 18.5795C132.413 18.8342 132.266 19.2855 132.4 19.6976L135.041 27.8262C135.341 28.7475 134.286 29.5137 133.502 28.9443L126.588 23.9205C126.237 23.6658 125.763 23.6658 125.412 23.9205L118.498 28.9443C117.714 29.5137 116.659 28.7475 116.959 27.8262L119.6 19.6976C119.734 19.2855 119.587 18.8342 119.237 18.5795L112.322 13.5557C111.538 12.9863 111.941 11.7467 112.91 11.7467L121.457 11.7467C121.89 11.7467 122.274 11.4678 122.408 11.0557L125.049 2.92705Z" fill="#FDAF3B"/>
+                                <path d="M162.049 2.92705C162.348 2.00574 163.652 2.00574 163.951 2.92705L166.592 11.0557C166.726 11.4678 167.11 11.7467 167.543 11.7467L176.09 11.7467C177.059 11.7467 177.462 12.9863 176.678 13.5557L169.763 18.5795C169.413 18.8342 169.266 19.2855 169.4 19.6976L172.041 27.8262C172.341 28.7475 171.286 29.5137 170.502 28.9443L163.588 23.9205C163.237 23.6658 162.763 23.6658 162.412 23.9205L155.498 28.9443C154.714 29.5137 153.659 28.7475 153.959 27.8262L156.6 19.6976C156.734 19.2855 156.587 18.8342 156.237 18.5795L149.322 13.5557C148.538 12.9863 148.941 11.7467 149.91 11.7467L158.457 11.7467C158.89 11.7467 159.274 11.4678 159.408 11.0557L162.049 2.92705Z" fill="#FDAF3B"/>
+                              </svg>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+         
+          </div>
+
+     </div>
+     <!-- customers review ends -->
+     <!-- footer  -->
+     <footer>
+        <div class="footer">
+            <!-- <div class="nothing"></div> -->
+            <div class="footer-end">
+                <!-- <div class="nothing"></div> -->
+               
+                <div>
+                    <div>
+                        <div class="navbar" id="navbar">
+                    <div class=" logo ite" id="logo" >
+                        <img style="width: 80%; height: 5vh;" src="img/Logo.png" alt="logo" srcset="">
+                        <h4 class="trans-flow-font">TransitFlow</h4>
+                    </div>
+                </div>
+                </div>
+                    <p>Leverage agile frameworks to provide a robust synopsis for strategy  collaborative <br> thinking to further the overall value proposition.</p>
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 63" fill="none">
+                            <circle cx="32" cy="31.5" r="31" fill="#111C55" stroke="#273270"/>
+                            <path d="M41.496 23H23.504C22.9495 23 22.5 23.3755 22.5 23.8387V37.1613C22.5 37.6245 22.9495 38 23.504 38H41.496C42.0505 38 42.5 37.6245 42.5 37.1613V23.8387C42.5 23.3755 42.0505 23 41.496 23Z" stroke="#F6B426"/>
+                            <path d="M22.5 23L32.9247 30L42.5 23.2294" stroke="#F6B426"/>
+                          </svg>
+                          <div>
+                            <p>Email <br>Obasanjoseph9@gmail.com</p>
+                          </div>
+                    </div>
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 63" fill="none">
+                            <circle cx="32" cy="31.5" r="31" fill="#111C55" stroke="#273270"/>
+                            <path d="M24.4741 22.1408C24.3394 22.1449 24.2071 22.1743 24.0848 22.2272C23.9625 22.28 23.8528 22.3554 23.7622 22.4487C23.6715 22.542 23.6018 22.6514 23.5571 22.7704C23.5124 22.8894 23.4936 23.0156 23.5019 23.1416C23.6364 25.3015 24.2704 30.5716 27.3059 33.8583C30.9409 37.8181 35.6748 39.1824 40.5317 38.9808C40.792 38.9662 41.0368 38.8596 41.2165 38.6826C41.3962 38.5055 41.4975 38.2712 41.5 38.0268V34.5674C41.497 34.2446 41.3783 33.9322 41.163 33.6802C40.9476 33.4282 40.6482 33.2513 40.3127 33.1779L37.8804 32.6739C37.5796 32.6138 37.2664 32.6397 36.9815 32.7481C36.6965 32.8566 36.4528 33.0427 36.2819 33.2823L35.744 34.0454C35.6946 34.1153 35.6208 34.1668 35.5352 34.1911C35.4496 34.2154 35.3577 34.211 35.2752 34.1786C34.0379 33.6783 29.1081 31.5184 28.5663 27.8753C28.5557 27.805 28.5675 27.7333 28.6003 27.6692C28.6332 27.6051 28.6855 27.5516 28.7507 27.5154L29.7267 26.9574C29.9944 26.802 30.2047 26.5732 30.3291 26.3022C30.4535 26.0311 30.486 25.7308 30.4222 25.4419L29.8881 23.1236C29.81 22.7988 29.6142 22.5093 29.3339 22.3045C29.0537 22.0998 28.7064 21.9923 28.3511 22.0004L24.4741 22.1408Z" stroke="#F6B426"/>
+                          </svg>
+                          <div>
+                            <p>Call Me <br>07068795963</p>
+                          </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="pag">
+                        <h2 class="items ite">pages</h2>
+                    </div>
+                    <div>
+                        <ul style="list-style: none;padding-top: 1rem;">
+                            <li><a href="about-page.html">About us</a></li>
+                            <li><a href="service.html">Our services</a></li>
+                             <li><a href="team.html">Our Team</a></li>
+                             <li><a href="project.html">Our Projects</a></li>
+                             <li><a href="pricing.html">Pricing </a></li>
+                             <li><a href="contact.html">Contacts </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="pag">
+                        <h2 style="padding-bottom: 2rem;" class="items ite">subscribe</h2>
+                        <div>
+                            <input class="input" type="email" placeholder="Email Here*">
+                        </div>
+                        <button> <a href="#">Send Now </a></button>
+                    </div>
+                 
+                </div>
+            </div>
+            <hr style="background-color: #666C89;color: #666C89; fill: #666C89; ">
+              <!-- copy write -->
+     <div> <p style="text-align: center;">Copyright © TransitFlow | Designed by VictorFlow - Powered by Webflow.| Developed by DevJay</p></div>
+    <!-- copy write ends -->
+        </div>
+    </footer>
+     <!-- footer ends -->
+       <!-- links -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="app.js"></script>
+    <!-- links finish -->
+</body>
+</html>
